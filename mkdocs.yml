@@ -1,0 +1,100 @@
+# Project information
+site_name: IDOBlog
+site_url: https://bendevcat.github.io/idoblog
+site_author: Benoît CATILLON
+
+# Repository
+repo_name: idoblog
+repo_url: https://github.com/bendevcat/idoblog
+edit_uri: edit/master/docs
+docs_dir: docs
+
+# Navigation
+nav:
+  - Bookmarks:
+    - Azure: 'bookmarks/azure.md'
+    - Docker: 'bookmarks/docker.md'
+    - GitHub Actions: 'bookmarks/github-actions.md'
+    - Kubernetes: 'bookmarks/kubernetes.md'
+    - Linux: 'bookmarks/linux.md'
+    - Terraform: 'bookmarks/terraform.md'
+  - Tutorials:
+    - Overview: 'tutorials/overview.md'
+    - MkDocs: 'tutorials/mkdocs.md'
+
+## DO NOT CHANGE BELOW THIS LINE
+
+# Copyright
+# TBD
+
+# Theme
+theme:
+  name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    logo: material/library
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.expand
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: blue grey
+      accent: blue
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      primary: blue grey
+      accent: blue
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+# TBD
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
