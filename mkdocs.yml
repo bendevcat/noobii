@@ -6,12 +6,13 @@ site_author: Benoît CATILLON
 # Repository
 repo_name: idoblog
 repo_url: https://github.com/bendevcat/idoblog
-edit_uri: edit/master/docs
+edit_uri: edit/main/docs
 docs_dir: docs
 
 # Navigation
 nav:
   - Bookmarks:
+    - Overview: 'bookmarks/overview.md'
     - Azure: 'bookmarks/azure.md'
     - Docker: 'bookmarks/docker.md'
     - GitHub Actions: 'bookmarks/github-actions.md'
@@ -20,12 +21,9 @@ nav:
     - Terraform: 'bookmarks/terraform.md'
   - Tutorials:
     - Overview: 'tutorials/overview.md'
+    - Github Actions:
+      - Build et publish un monorepo Lerna: 'tutorials/github-actions/lerna.md'
     - MkDocs: 'tutorials/mkdocs.md'
-
-## DO NOT CHANGE BELOW THIS LINE
-
-# Copyright
-# TBD
 
 # Theme
 theme:
@@ -58,9 +56,18 @@ theme:
 # Plugins
 plugins:
   - search
-
-# Customization
-# TBD
+  - macros
+  - i18n:
+      default_language: fr
+      languages:
+        en: English
+        fr: Français
+      no_translation:
+        en: This page isn't translated to English.
+        fr: Cette page n'est pas traduite en Français.
+      nav_translations:
+        fr:
+          Overview: Aperçu
 
 # Extensions
 markdown_extensions:
