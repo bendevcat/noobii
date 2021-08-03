@@ -1,11 +1,11 @@
 # Project information
-site_name: IDOBlog
-site_url: https://bendevcat.github.io/idoblog
-site_author: Benoît CATILLON
+site_name: noobii.dev - from zero to wherever you want
+site_url: https://bendevcat.github.io/noobii
+site_author: benCat
 
 # Repository
-repo_name: idoblog
-repo_url: https://github.com/bendevcat/idoblog
+repo_name: noobii
+repo_url: https://github.com/bendevcat/noobii
 edit_uri: edit/main/docs
 docs_dir: docs
 
@@ -21,8 +21,10 @@ nav:
     - Terraform: 'bookmarks/terraform.md'
   - Tutorials:
     - Overview: 'tutorials/overview.md'
+    - Datadog:
+      - Deploy Agent on Kubernetes with Helm: 'tutorials/datadog/deploy-agent-on-kubernetes-with-helm.md'
     - Github Actions:
-      - Build et publish un monorepo Lerna: 'tutorials/github-actions/lerna.md'
+      - Build and publish Lerna monorepo: 'tutorials/github-actions/lerna.md'
     - MkDocs: 'tutorials/mkdocs.md'
 
 # Theme
@@ -57,13 +59,13 @@ theme:
 plugins:
   - search
   - i18n:
-      default_language: fr
+      default_language: en
       languages:
         en: English
         fr: Français
       no_translation:
-        en: This page isn't translated to English.
-        fr: Cette page n'est pas traduite en Français.
+        en: This page isn't translated to English yet.
+        fr: Cette page n'est pas encore traduite en Français.
       nav_translations:
         fr:
           Overview: Aperçu
