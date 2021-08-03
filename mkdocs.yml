@@ -9,6 +9,9 @@ repo_url: https://github.com/bendevcat/noobii
 edit_uri: edit/main/docs
 docs_dir: docs
 
+extra_css:
+  - stylesheets/extra.css
+
 # Navigation
 nav:
   - Bookmarks:
@@ -25,11 +28,15 @@ nav:
       - Deploy Agent on Kubernetes with Helm: 'tutorials/datadog/deploy-agent-on-kubernetes-with-helm.md'
     - Github Actions:
       - Build and publish Lerna monorepo: 'tutorials/github-actions/lerna.md'
+      - Template NodeJS: 'tutorials/github-actions/node-backend.md'
+      - Template Angular: 'tutorials/github-actions/node-frontend.md'
+      - Build Java application with Maven: 'tutorials/github-actions/maven.md'
     - MkDocs: 'tutorials/mkdocs.md'
 
 # Theme
 theme:
   name: material
+  favicon: images/favicon.ico
   font:
     text: IBM Plex Sans
     code: IBM Plex Mono
@@ -39,13 +46,15 @@ theme:
     - navigation.tabs
     - navigation.instant
     - navigation.expand
+    - navigation.top
+    - toc.integrate
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-      primary: blue grey
+      primary: teal
       accent: blue
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -58,6 +67,7 @@ theme:
 # Plugins
 plugins:
   - search
+#  - macros
   - i18n:
       default_language: en
       languages:
@@ -69,6 +79,14 @@ plugins:
       nav_translations:
         fr:
           Overview: Aperçu
+      extra:
+        alternate:
+          - name: English
+            link: <your-site>/en/
+            lang: en
+          - name: Deutsch
+            link: <your-site>/de/
+            lang: de
 
 # Extensions
 markdown_extensions:

@@ -27,7 +27,7 @@ Voici ci-dessous la méthode qui m'a permis d'arriver au bout en respectant la d
 
 A la racine de votre monorepo, ouvrez un terminal et copiez-collez le block ci-dessous :
 
-```yaml linenums="1"
+```shell linenums="1"
 mkdir -p ./.github/workflows && 
 echo '
 name: Release independent Lerna libs
@@ -57,13 +57,13 @@ jobs:
         always-auth: false
         scope: '@your-npm-owner'
 
-    - name: On PR, checkout to ${GITHUB_HEAD_REF}
+    - name: On PR, checkout to ${ GITHUB_HEAD_REF }
     - if: github.ref != 'refs/heads/master'
-      run: git checkout -b ${GITHUB_HEAD_REF}
+      run: git checkout -b ${ GITHUB_HEAD_REF }
 
     - run: npm install
       env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Setup Node with GITHUB Registry
       uses: actions/setup-node@v2
