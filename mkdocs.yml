@@ -56,7 +56,6 @@ theme:
 # Plugins
 plugins:
   - search
-  - macros
   - i18n:
       default_language: fr
       languages:
